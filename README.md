@@ -23,7 +23,7 @@ On average, it takes the control plane less than 4 minutes to fully provision, a
 
 ## Troubleshooting
 The module will output the commands required to SSH into the worker and controlPlane nodes.
-Once connected, you can review the cloud-init logs to determine when the scripts finish running, and whether an error was encountered.
+Once connected, you can review the cloud-init logs to determine when the scripts finish running, and whether an error occurred.
 ```shell
 tail -f /var/log/cloud-init-output.log
 ```
@@ -87,8 +87,8 @@ Alternatively, the generated cloud-init scripts can be found on the server in th
 
 | Name                                                                                                                       | Description                                               |
 |----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| <a name="output_cloudinit_config_controlPlane"></a> [cloudinit_config_controlPlane](#output_cloudinit_config_controlPlane) | Cloud-init config                                         |
-| <a name="output_cloudinit_config_workerNode"></a> [cloudinit_config_workerNode](#output_cloudinit_config_workerNode)       | Cloud-init config                                         |
+| <a name="output_cloudinit_config_controlPlane"></a> [cloudinit_config_controlPlane](#output_cloudinit_config_controlPlane) | Cloud-init config for the Control Plane                   |
+| <a name="output_cloudinit_config_workerNode"></a> [cloudinit_config_workerNode](#output_cloudinit_config_workerNode)       | Cloud-init config for the Worker Node                     |
 | <a name="output_ssh_control_plane"></a> [ssh_control_plane](#output_ssh_control_plane)                                     | Command to SSH into the Control Plane using its Public IP |
 | <a name="output_ssh_worker_node"></a> [ssh_worker_node](#output_ssh_worker_node)                                           | Command to SSH into the Worker Node using its Public IP   |
 <!-- END_TF_DOCS -->

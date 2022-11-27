@@ -9,11 +9,11 @@ output "ssh_worker_node" {
 }
 
 output "cloudinit_config_controlPlane" {
-  description = "Cloud-init config"
+  description = "Cloud-init config for the Control Plane"
   value       = data.cloudinit_config.controlPlane.rendered
 }
 
 output "cloudinit_config_workerNode" {
-  description = "Cloud-init config"
+  description = "Cloud-init config for the Worker Node"
   value       = data.cloudinit_config.workerNode.rendered
 }
