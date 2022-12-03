@@ -9,6 +9,11 @@ locals {
         content     = tls_private_key.key.private_key_pem
         defer       = true
     }]
+    hostname = "cp"
+  })
+  setWorkerHostname = yamlencode({
+    #cloud-config
+    hostname = "worker"
   })
 }
 
@@ -26,6 +31,11 @@ data "cloudinit_config" "workerNode" {
       }
     )
     filename = "workerNode.sh"
+  }
+
+  part {
+    content_type = "text/cloud-config"
+    content      = local.setWorkerHostname
   }
 }
 
